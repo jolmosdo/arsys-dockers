@@ -11,6 +11,8 @@ RUN apt-get update
 
 EXPOSE 80
 # prueba de comentario
+WORKDIR /var/www/html/
+
 ENTRYPOINT ["nginx","-g","daemon off;"]
 
-CMD [ "-h" ]
+
