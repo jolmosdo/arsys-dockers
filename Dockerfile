@@ -10,5 +10,7 @@ RUN echo '<marquee> Hello Arsys!!!</marquee>' \
 RUN apt-get update
 
 EXPOSE 80
+# prueba de comentario
+ENTRYPOINT ["nginx","-g","daemon off;"]
 
-CMD ["nginx","-g","daemon off;"]
+CMD [ "-h" ]
