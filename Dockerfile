@@ -19,4 +19,4 @@ RUN usermod -aG sudo tomy
 
 USER tomy
 
-#ENTRYPOINT ["nginx","-g daemon off;"]
+VOLUME ["/my-data"]
