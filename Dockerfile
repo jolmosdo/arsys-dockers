@@ -19,6 +19,6 @@ RUN usermod -aG sudo jorge
 
 USER jorge
 
-#ENTRYPOINT ["nginx","-g","daemon off;"]
+VOLUME [ "/my-data" ]
 
 
