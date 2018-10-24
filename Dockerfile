@@ -1,6 +1,8 @@
 FROM ubuntu:18.10
 MAINTAINER m.tomas.ortega@gmail.com
 
+RUN useradd tomy
+
 RUN apt-get update
 RUN apt-get install nginx -y
 
@@ -11,6 +13,10 @@ RUN apt-get update
 
 EXPOSE 80
 
-WORKDIR /var/www/html/
+ENV DATABASE_IP 192.167.2.9
 
-ENTRYPOINT ["nginx","-g daemon off;"]
+RUN usermod -aG sudo tomy
+
+USER tomy
+
+#ENTRYPOINT ["nginx","-g daemon off;"]
